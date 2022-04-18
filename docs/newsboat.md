@@ -22,7 +22,7 @@ URLs
 
 <code>
 browser "open -a safari '%u'"
-<code>
+</code>
 
 </details>
 
