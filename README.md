@@ -1,9 +1,3 @@
----
-layout: default
-title: Home
-nav_order: 1
----
-
 # Princeton Geophysics Documentation and Tutorials
 
 This is the homepage for github pages based documentation written
