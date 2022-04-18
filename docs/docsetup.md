@@ -3,10 +3,7 @@ layout: default
 title: Documentation Setup
 ---
 
-# Princeton Geophysics Documentation and Tutorials
-
-This is the homepage for github pages based documentation written
-by members of the Princeton Geophysics group.
+# How the Docs are created & how to create more pages
 
 The setup is fairly simple since `Jekyll` will take care of creating a
 website from provided `markdown` files given a `_config.yml` file. So,
