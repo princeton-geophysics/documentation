@@ -1,4 +1,4 @@
-[DOCUMENTATION WEBSITE](http://www.github.com/princeton-geophysics/princeton-geophysics.github.io)
+[DOCUMENTATION WEBSITE](http://princeton-geophysics.github.io)
 
 # Princeton Geophysics Documentation and Tutorials
 
