@@ -1,44 +1,64 @@
-# Introduction to `conda`
+---
+layout: default
+title: Home
+nav_order: 1
+---
 
-This is the repository associated to the PICScIE Spring Workshop 2022 
-'Introduction to Conda'.
+# Princeton Geophysics Documentation and Tutorials
 
-The repo is divided into two sections `docs/`, which are the notes on various 
-conda related topics, and `python-package`, which is a mini bare-bone python
-package that is used as an example for creating your own conda package.
+This is the homepage for github pages based documentation written
+by members of the Princeton Geophysics group.
 
-The full documentation for the course is located here: 
-[Documentation](https://lsawade.github.io/introduction-to-conda/)
+The setup is fairly simple since `Jekyll` will take care of creating a
+website from provided `markdown` files given a `_config.yml` file. So,
+every page in the directory `docs` automatically is included.
+Subdirectories of `docs` will automatically create subpages.
 
-The courses repo is located here
-[Github Repo](https://github.com/lsawade/introduction-to-conda)
+The detailed description of the theme and how to organize content for
+`jekyll` pages is shown in the docs for [Just the
+docs](`https://just-the-docs.github.io/just-the-docs`).
 
-## Workshop's goals
+At a bare minimum each page has the following header:
 
-Providing you with the tools to make your software reproducible and impart 
-some knowledge to you on how to publish your software using conda
+```markdown
+---
+layout: default
+title: <title>
+---
+```
 
-* Understanding what
-    * a package is
-    * a package manager is
-    * motivates the use of a package manager
-* Some environment knowledge
-    * How to create an environment 
-    * How to work with files describing an environment (`environment.yml`)
-    * Reproduce an environment
-* Some package knowledge
-    * How to install packages
-    * How to create your own package
-    * How to publish your own package
+Followed by normal markdown syntax. As far as I know, cross referencing
+is not really supported (feel free to add explanation if it is).
 
-## ***Not*** workshop goals
+For simplicity do not use the `nav_order: <int>` directive. So, no
 
-* Make you a Python wizard
-* Teach you how to make a Python Package, even though we are doing it
-* Completely `conda`-ify all of your software - that would be post workshop work
+```markdown
+---
+layout: default
+title: <title>
+`nav_order: <int>`
+---
+```
 
+That way, the docs except the `Homepage` are sorted in alphabetical order.
 
-## Useful links
+If you want to create a subdirectory structure, please visit
+[`just-the-docs`
+Documentation](https://just-the-docs.github.io/just-the-docs/docs/navigation-structure)
+on navigation structure. Because the markdown headers need to know
+what's a parent and what not. To sort your `subdirectory` docs in a
+specific order, please refer to the navigation structure documenation
+as well.
+
+The documentation are automatically built once new adds are merged
+with or pushed to the `main` branch.  Note that it takes a sec to
+update.
+
+Happy docs writing!
+
+---
+
+## Useful external quick links
 
 ***Command line***:
 * Be a command line wizard: [Intro to the Command Line](https://github.com/gabeclass/introcmdline)

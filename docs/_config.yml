@@ -1,9 +1,7 @@
-title: Introduction to Conda
-author: Lucas Sawade
-description: Workshope page for Introduction to Conda 2022
+title: Princeton Geophysics
+author: Princeton Geophysics
+description: Collection of docs and tutorials written by members of the Princeton Geophysics group.
 permalink: pretty
-exclude:
-  python-package
 plugins:
   - jekyll-relative-links
   - jekyll-remote-theme
@@ -21,7 +19,7 @@ social-network-links:
   # rss: true  # remove this line if you don't want to show an RSS link at the bottom
   github: lsawade
 
-url-pretty: "lsawade.github.io"
+url-pretty: "Princeton Geophysics"
 
 heading_anchors: true
 
