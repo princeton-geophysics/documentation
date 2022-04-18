@@ -11,7 +11,7 @@ members of the Princeton Geophysics group. It mostly contains
 productivity notes on everyday tools, code organization etc.
 
 The how-to-create-more-docs is located on the documentation setup
-page [Documation Setup](docsetup.md).
+page [Documentation Setup](docsetup.md).
 
 Hopefully you find what you are looking for!
 
