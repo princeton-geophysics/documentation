@@ -16,12 +16,22 @@ You will need two files, a config file that contains a specific
 set of command definition and a a file that contains
 URLs
 
+<details>
+
+<summary> <code>.newsboat/config</code> </summary>
+
+<code>
+browser "open -a safari '%u'"
+<code>
+
+</details>
+
 
 <details>
 
-<summary> `.newsboat/urls` </summary>
+<summary> <code>.newsboat/urls</code> </summary>
 
-```
+<code>
 https://academic.oup.com/rss/site_5282/3148.xml
 http://feeds.nature.com/nature/rss/current
 http://feeds.nature.com/ncomms/rss/current
@@ -48,17 +58,8 @@ https://academic.oup.com/rss/site_6448/4114.xml
 https://academic.oup.com/rss/site_6448/advanceAccess_4114.xml
 https://onlinelibrary.wiley.com/feed/15585646/most-recent
 https://www.mdpi.com/rss/journal/remotesensing~
-```
+</code>
 
 </details>
 
 
-<details>
-
-<summary> `.newsboat/config` </summary>
-
-```
-browser "open -a safari '%u'"
-```
-
-</details>
