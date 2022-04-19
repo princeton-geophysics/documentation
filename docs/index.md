@@ -10,8 +10,10 @@ This is the homepage for github-pages-based documentation written by
 members of the Princeton Geophysics group. It mostly contains
 productivity notes on everyday tools, code organization etc.
 
-The how-to-create-more-docs is located on the documentation setup
-page [Documentation Setup](docsetup.md).
+The 'how-to-create-more-docs' is located on the documentation setup page
+[Documentation Setup](docsetup.md).
+
+For Princeton Cluster specific tutorials please have a look at the Princeton Institue for Computational Science and Engineering's [Knowledge Base](https://researchcomputing.princeton.edu/support/knowledge-base).
 
 Hopefully you find what you are looking for!
 
