@@ -55,6 +55,11 @@ include:
   - figures
   - figures/environments.png
 
+# Links that appear in the top right corner of the webpage
+aux_links:
+  "PICSciE Knowledge Base":
+    - "https://researchcomputing.princeton.edu/support/knowledge-base"
+
 # readme_index:
 #   enabled:          true
 #   remove_originals: false
