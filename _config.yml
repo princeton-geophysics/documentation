@@ -54,7 +54,7 @@ search:
 include:
   - figures
   - figures/environments.png
-  - docs/assets/vscode/*.png
+  - docs/vscode/figures/*.png
 
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile", "docs/tests/"]
 
