@@ -53,12 +53,13 @@ the default directory of the ssh command. Let's go through this step by step.
 3. Now, you should be able to connect to the remote machine using two ways.
    Either you connect manually by clicking on the `+` indicated by the green
    circle in the above figure and enter your ssh command as you usually connect,
-   or you use the configuration of an existing `~/.ssh/config`. In fact, the former option will add an entry to your `~/.ssh/config`. 
+   or you use the configuration of an existing `~/.ssh/config`. In fact, the former option will add an entry to your `~/.ssh/config`. In the next section,
+   we discuss how to add an entry to the `~/.ssh/config`.
 
-4. vscode should open a new window which tries to connect to the remote machine.
-   If successful, you should be able to open a specific folder containing your
-   code just as you would on your local machine with th difference that you are
-   exploring the file system of the remote machine. 
+4. `vscode` should open a new window which tries to connect to the remote
+   machine. If successful, you should be able to open a specific folder
+   containing your code just as you would on your local machine with th
+   difference that you are exploring the file system of the remote machine. 
 
 ***DISCLAIMER 1***: Only
 connect to specific folder on the clusters, do not connect to, e.g.
@@ -67,7 +68,17 @@ frequently updates the file explorer. This update takes longer the larger the
 amount of subdirectories vscode has to scan. In the case of `/home/` or
 `/scratch/gpfs/`, the amount of subdirectories is immense
 
-***DISCLAIMER 2***: There are a thousand reasons why your session may not start succesfully. A first step in the debugging process should always be: 'Can I connect to the remote machine via `ssh` from the terminal to begin with?' If not, there's just no way that vscode could connect either.
+***DISCLAIMER 2***: There are a thousand reasons why your session may not start
+succesfully. A first step in the debugging process should always be: 'Can I
+connect to the remote machine via `ssh` from the terminal to begin with?' If
+not, there's just no way that vscode could connect either. If that's possible
+the next step would be to try killing a possibly running `vscode-server` by
+opening the command palette and killing the remote session. On a Mac,
+`Cmd+Shift+P` to open the command palette, on Windows/Linux `Ctrl+Shift+P`, then
+`Remote SSH: Kill VS Code Server on Remote Host ...` , which will prompt a selection
+of possible hosts. Choose the host you want to connect to, e.g.,
+`<puid>@tigergpu.princeton.edu`.
+
 
 ### Editing your `~/.ssh/config`
 
@@ -107,7 +118,56 @@ Host della.princeton.edu della
 
 For details on suppressing DUO with a ProxyJump, please visit [Removing Tedium](https://github.com/PrincetonUniversity/removing_tedium/tree/master/01_suppressing_duo#ii-multiplexing-approach-vpn-free).
 
-## Jupyter Notebooks
+## Jupyter Notebooks on the Cluste
 
-Coming soon...
+Using the Python extension, Jupyter notebooks are natively supported in VSCode.
+However, to run the on the cluster, we have to complete some extra steps:
+
+This workflow lets you run Jupyter notebooks on on `tigergpu` in
+`vscode` running on your laptop:
+
+1. Install the `Remote Development Extension` as described above. 
+2. Connected to, e.g., `tigergpu` (head node). To simplify the setup it is also
+   helpful to load the `anaconda` module in my `~/.bashrc file` on the cluster:
+   ```bash
+   module load anaconda/4.4.0
+   ```
+   This was needed because I don't know how to load the environment module
+   in vscode and it needs an environment that contains Jupyter.
+
+3. I ran a simple notebook:
+   ```python
+   print('hello world!'))
+   ```
+   on tigergpu's head node to make sure everything works properly. It's important to note here that the Python extension has to be installed on the remote server as well! So, go to the extensions tab and double check. Otherwise, you will _not_ be able to select a environment specific interpreter.
+
+4. On tigergpu, I requested an salloc session:
+   ```bash
+   salloc -N 1 -n 4 -t 0:20:0
+   ```
+   Note the hostname of the node, e.g., `tiger-i26c2n17`. Note that for the 
+   purpose of the example, we did not ask for a GPU for the purpose of the 
+   example because it takes longer to get an allocation for GPU nodes. It is 
+   however no problem at all.
+
+5. On your laptop, add this entry to my `~/.ssh/config`:
+   ```ssh-config
+   Host tiger-compute
+       User <puid>
+       Hostname tiger-i26c2n17
+       ProxyJump tigergpu
+   ```
+   The `User` keyword is only important when your local username is different
+   from your puid.
+
+   One downside of that method is that you will need to modify your config
+   file every time you get an salloc session. There might be ways around
+   that. The good thing is that vscode seems to parse your config file when
+   it gives suggestions for hosts to connect to.
+
+6. On my laptop, I opened a remote vscode session on `tiger-compute` (vscode 
+   recognized that host from my config file).
+
+7. Then I was able run the notebook on the compute node.
+
 
