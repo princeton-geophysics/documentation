@@ -55,6 +55,8 @@ include:
   - figures
   - figures/environments.png
 
+exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile", "docs/tests/"]
+
 # Links that appear in the top right corner of the webpage
 aux_links:
   "PICSciE Knowledge Base":
