@@ -13,7 +13,7 @@ toc:
   h_min: 1
   h_max: 4
 remote_theme: just-the-docs/just-the-docs
-color_scheme: nil
+color_scheme: "dark"
 social-network-links:
   email: "lsawade@princeton.edu"
   # rss: true  # remove this line if you don't want to show an RSS link at the bottom

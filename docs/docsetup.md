@@ -50,5 +50,8 @@ The documentation are automatically built once new adds are merged
 with or pushed to the `main` branch.  Note that it takes a sec to
 update.
 
+Note on images, the images have to be in a separate folder called `assets`.  For reference, see `docs/vscode/remotecodeediting.md` for usage in the text and `docs/assets/vscode/<images>` for a location example.
+
+
 Happy docs writing!
 
