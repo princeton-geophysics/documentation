@@ -54,7 +54,7 @@ search:
 include:
   - figures
   - figures/environments.png
-  - vscode/figured/*.png
+  - vscode/figures/*.png
 
 # Links that appear in the top right corner of the webpage
 aux_links:
