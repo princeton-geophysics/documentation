@@ -29,7 +29,7 @@ launched on the remote machine that "sends" information from the remote machine
 to your local machine. This is show in the Figure below.
 
 <p align="center">
-<img src="../../vscode/figures/remotevscode.png" width="75%" class="center"/>
+<img src="../../assets/vscode/remotevscode.png" width="75%" class="center"/>
 </p>
 
 _Figure taken from (https://code.visualstudio.com/docs/remote/remote-overview)_
@@ -42,7 +42,7 @@ the default directory of the ssh command. Let's go through this step by step.
 1. Install vscode (if you haven't yet) -- [vscode](https://code.visualstudio.com)
 2. Install the Remote Development Extension Pack -- [RDE Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack). The RDE should show add a new menu button on the left hand-side indicated by the red circle in the image below.
    <p align="center">
-   <img src="../../vscode/figures/remoteexplorer.png" width="25%" class="center"/>
+   <img src="../../assets/vscode/remoteexplorer.png" width="25%" class="center"/>
    </p>
 
     _Screenshot from local machine. The red circle indicates the button that
@@ -169,6 +169,4 @@ This workflow lets you run Jupyter notebooks on on `tigergpu` in
    `tiger-compute` (vscode recognized that host from my config file).
 
 7. Then, you should be able to run the notebook on the compute node.
-
-
 
