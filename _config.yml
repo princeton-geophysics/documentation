@@ -62,6 +62,8 @@ exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "pac
 aux_links:
   "PICSciE Knowledge Base":
     - "https://researchcomputing.princeton.edu/support/knowledge-base"
+  "University Webpage":
+    - "https://geosciences.princeton.edu/research/geophysics"
 
 # readme_index:
 #   enabled:          true
