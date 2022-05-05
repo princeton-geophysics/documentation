@@ -41,9 +41,9 @@ the default directory of the ssh command. Let's go through this step by step.
 
 1. Install vscode (if you haven't yet) -- [vscode](https://code.visualstudio.com)
 2. Install the Remote Development Extension Pack -- [RDE Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack). The RDE should show add a new menu button on the left hand-side indicated by the red circle in the image below.
-    <p align="center">
-    <img src="figures/remoteexplorer.png" width="25%" class="center"/>
-    </p>
+   <p align="center">
+   <img src="figures/remoteexplorer.png" width="25%" class="center"/>
+   </p>
 
     _Screenshot from local machine. The red circle indicates the button that
     brings you to the 'Remote Explorer'. The green circle enables you to add a
@@ -61,12 +61,12 @@ the default directory of the ssh command. Let's go through this step by step.
    containing your code just as you would on your local machine with th
    difference that you are exploring the file system of the remote machine. 
 
-***DISCLAIMER 1***: Only
-connect to specific folder on the clusters, do not connect to, e.g.
-`/scratch/gpfs/`. This folder contains all users and all their files. Vscode
-frequently updates the file explorer. This update takes longer the larger the
-amount of subdirectories vscode has to scan. In the case of `/home/` or
-`/scratch/gpfs/`, the amount of subdirectories is immense
+***DISCLAIMER 1***: Only connect to specific folder on the clusters, do _not_
+connect to, e.g. `/scratch/gpfs/<puid>` or `/home/<puid>`. These folder contain
+all users and all their files. Vscode frequently updates the file explorer. This
+update takes longer the larger the amount of subdirectories vscode has to scan.
+In the case of `/home/` or `/scratch/gpfs/`, the amount of subdirectories is
+immense.
 
 ***DISCLAIMER 2***: There are a thousand reasons why your session may not start
 succesfully. A first step in the debugging process should always be: 'Can I
@@ -165,9 +165,10 @@ This workflow lets you run Jupyter notebooks on on `tigergpu` in
    that. The good thing is that vscode seems to parse your config file when
    it gives suggestions for hosts to connect to.
 
-6. On my laptop, I opened a remote vscode session on `tiger-compute` (vscode 
-   recognized that host from my config file).
+6. On your local machine, you can open a remote vscode session on
+   `tiger-compute` (vscode recognized that host from my config file).
 
-7. Then I was able run the notebook on the compute node.
+7. Then, you should be able to run the notebook on the compute node.
+
 
 
